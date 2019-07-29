@@ -1,16 +1,19 @@
-<html>
+<html style = "position: absolute;top: 10px; left: 40%;
+                 background-color: Lavender">
   <head>
     <title>The Gossip Project</title>
   </head>
     <body>
-      <h1>Mon super site de gossip, depuis le dossier views !</h1>
+      
         <h2>PAGE POTIN</h2>
 	       <p>Voici la page du potin n°<%=params[:id]%></p>
               <ul> Son auteur : <%= find_gossip.author %><br/>
 	               Le contenu du potin :  <%= find_gossip.content %>
               </ul>
-
-					Lien pour revenir à la page des potins. Cliquer  <a href="http://localhost:4567/">ici</a>
+        <form> 
+          <input type='button' value ='Modifier ce potin'onclick="document.location.href='http://localhost:4567/gossips/<%=params[:id]%>/edit';" style="background-color: lime"/>
+          <input type="button" value="Menu précédent" onclick="document.location.href='http://localhost:4567/';" style="background-color: lime">
+				</form>
     </body>
 </html>
       
