@@ -6,10 +6,10 @@
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
    
     <h2>Voici les gossips existants avec leurs auteurs </h2>
-    <% gossips.each do |gossip| %>
+    <% gossips.each_with_index do |gossip, index| %>
         <p> 
         <ul>
-          <li> Auteur: <%= gossip.author %><br/>
+          <li> Auteur: <%= gossip.author %><a href="/gossips/<%= index%>">show</a><br/>
                Gossips: <%= gossip.content %> 
        </li>
        </ul>

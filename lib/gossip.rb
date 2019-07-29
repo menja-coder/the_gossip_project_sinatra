@@ -24,8 +24,8 @@ class Gossip
         end
 
         def self.find(id)
-            all = all_gossips
-            return all[id]
+            
+            return Gossip.all[id.to_i]
         end
 
 
