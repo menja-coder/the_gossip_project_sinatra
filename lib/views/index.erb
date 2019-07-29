@@ -1,0 +1,25 @@
+<html style ="background-color: Lavender">
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip</h1>
+   
+    <h2>Voici les gossips existants avec leurs auteurs </h2>
+    <% gossips.each_with_index do |gossip, index| %>
+        <p> 
+        <ul>
+          <li> Auteur: <a href="/gossips/<%= index%>"><%= gossip.author %></a><br/>
+               Gossips: <%= gossip.content %> 
+       </li>
+       </ul>
+        </p>
+      <% end %>
+
+    	<br/>
+    	<br/>
+		<input type="button" value="Affiche les potins" onclick="document.location.href='/';" style="background-color: lime">
+		<input type="button" value="Créer un potin" onclick="document.location.href='/gossips/new/';" style="background-color: lime">
+    
+  </body>
+</html>
